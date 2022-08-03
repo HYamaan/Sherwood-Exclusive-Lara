@@ -1,0 +1,40 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem=10px, 10px/16px=62.5%;
+  // Converted breakpoints from px to em using calc-em function
+
+  @include respond(phone){
+    font-size: 50%;
+  }
+  @include respond(tab-port){
+    font-size: 50%;
+  } 
+  @include respond(tab-land){
+    font-size:56.25%;
+  }
+  @include respond(big-desktop){
+    font-size: 75%;
+  }
+}
+
+body {
+  min-height:100vh;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-image: $bg-color-2;
+  color:$grey-dark-2;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include respond(bp-medium) {
+    padding: 0;
+  }
+}
